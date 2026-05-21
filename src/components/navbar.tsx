@@ -32,10 +32,6 @@ export default function NavBar () {
                     </li>
 
                     <li>
-                        <a href="#formacao" className="hover:text-primary transition-colors duration-300">Formação</a>
-                    </li>
-
-                    <li>
                         <a href="#projetos" className="hover:text-primary transition-colors duration-300">Projetos</a>
                     </li>
 

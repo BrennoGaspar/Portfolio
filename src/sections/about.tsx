@@ -1,6 +1,6 @@
 'use client'
 
-import Card from "@/components/card";
+import Card from "@/components/cardCourse";
 import { motion } from "framer-motion"
 
 export default function About () {
