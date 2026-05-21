@@ -45,7 +45,7 @@ export default function Hero() {
                 {/* Texto */}
                 <motion.div
                     initial={{ opacity: 0, x: -60 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     className="space-y-8"
                 >
@@ -85,9 +85,9 @@ export default function Hero() {
 
                                 <motion.div
                                     key={tech.name}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.4 }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.2 }}
                                     whileHover={{ y: -5, scale: 1.05 }}
                                     className="group relative overflow-hidden flex items-center gap-3 bg-card/70 border border-border px-5 py-3 rounded-2xl text-sm font-medium text-foreground backdrop-blur-xl transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_rgba(59,130,246,0.25)]"
                                 >
@@ -127,7 +127,7 @@ export default function Hero() {
                 {/* Foto */}
                 <motion.div
                     initial={{ opacity: 0, x: 60 }}
-                    animate={{ opacity: 1, x: 0 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     className="relative flex justify-center"
                 >
