@@ -9,7 +9,7 @@ export default function Projetos () {
 
             <motion.div
                     initial={{ opacity: 0, y: 60 }}
-                    whileInView={{ opacity: 1, y:0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.3 }}
                     className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             >
@@ -43,6 +43,15 @@ export default function Projetos () {
                     imagePath="@/assets/images/projects/HomeBoard.png"
                 />
 
+            </motion.div>
+
+            <motion.div
+                    initial={{ opacity: 0, y: 90 }}
+                    whileInView={{ opacity: 1, y: 30 }}
+                    transition={{ duration: 1.3 }}
+                    className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+            >
+
                 <Projeto
                     stack="Full Stack"
                     titulo="EcoGru"
@@ -69,6 +78,15 @@ export default function Projetos () {
                     github="oi"
                     imagePath="@/assets/images/projects/HomeBoard.png"
                 />
+
+            </motion.div>
+
+            <motion.div
+                    initial={{ opacity: 0, y: 120 }}
+                    whileInView={{ opacity: 1, y: 60 }}
+                    transition={{ duration: 1.3 }}
+                    className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+            >
 
                 <Projeto
                     stack="Full Stack"
