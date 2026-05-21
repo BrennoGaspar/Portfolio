@@ -1,7 +1,6 @@
 'use client'
 
-import homeboard from "@/assets/images/projects/HomeBoard.png"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 
 interface ProjetoProp {
     stack: string;
@@ -10,7 +9,7 @@ interface ProjetoProp {
     tecnologias: string[];
     github: string;
     deploy?: string;
-    imagePath: string;
+    imagePath: StaticImageData;
 }
 
 export default function Projeto({stack, titulo, descricao, tecnologias, github, deploy, imagePath} : ProjetoProp) {
@@ -23,7 +22,7 @@ export default function Projeto({stack, titulo, descricao, tecnologias, github, 
                 <div className="relative overflow-hidden">
 
                     <Image
-                        src={homeboard}
+                        src={imagePath}
                         width={1000}
                         alt="Foto Projeto"
                         className="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-105"
