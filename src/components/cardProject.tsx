@@ -9,10 +9,11 @@ interface ProjetoProp {
     descricao: string;
     tecnologias: string[];
     github: string;
-    deploy: string | null;
+    deploy?: string;
+    imagePath: string;
 }
 
-export default function Projeto({stack, titulo, descricao, tecnologias, github, deploy} : ProjetoProp) {
+export default function Projeto({stack, titulo, descricao, tecnologias, github, deploy, imagePath} : ProjetoProp) {
 
     return(
         
@@ -84,7 +85,7 @@ export default function Projeto({stack, titulo, descricao, tecnologias, github, 
 
                             {deploy != null ? 
                                 <a href={deploy} className="flex items-center gap-2 text-foreground hover:text-primary transition-all duration-300 group">
-                                    Live Demo
+                                    Deploy
                                     <span className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                                     ↗
                                     </span>
