@@ -35,7 +35,7 @@ export default function Hero() {
 
     return (
 
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-32 md:pt-24">
+        <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-32 md:pt-24">
 
             {/* Fundo Glow */}
             <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary opacity-20 blur-[120px] rounded-full" />
@@ -112,12 +112,16 @@ export default function Hero() {
                     {/* Buttons */}
                     <div className="flex flex-wrap gap-4">
 
-                        <button className="bg-primary hover:bg-hover text-white px-8 py-4 rounded-2xl font-medium transition-all duration-300 hover:scale-105">
-                            Ver Projetos
-                        </button>
+                        <a 
+                            href="/Curriculo_Brenno_Gaspar_Pinto.pdf" 
+                            className="bg-primary hover:bg-hover text-white px-8 py-4 rounded-2xl font-medium transition-all duration-300 hover:scale-105"
+                            download
+                        >
+                            📄 Currículo
+                        </a>
 
                         <a href="https://br.linkedin.com/in/brennogasparpinto" className="border border-border hover:border-primary px-8 py-4 rounded-2xl font-medium transition-all duration-300">
-                            LinkedIn
+                            LinkedIn ↗
                         </a>
 
                     </div>

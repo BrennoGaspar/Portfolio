@@ -7,7 +7,7 @@ export default function About () {
 
     return (
 
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-32">
+        <section id="sobre" className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-32">
 
             {/* Fundo Glow */}
             <div className="absolute bottom-70 right-0 w-[400px] h-[400px] bg-primary opacity-10 blur-[120px] rounded-full" />

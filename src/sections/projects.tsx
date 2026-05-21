@@ -16,12 +16,12 @@ export default function Projetos () {
 
     return (
 
-        <section className="relative min-h-screen overflow-hidden px-6 pt-32 md:pt-24 pb-20">
+        <section id="projetos" className="relative min-h-screen overflow-hidden px-6 pt-32 md:pt-24 pb-20">
 
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 60 }}
-                    whileInView={{ opacity: 1, y: -50 }}
+                    whileInView={{ opacity: 1, y: 10 }}
                     transition={{ duration: 1.3 }}
                     className="space-y-6 text-center"
                 >
@@ -38,8 +38,8 @@ export default function Projetos () {
                 </motion.div>
 
             <motion.div
-                    initial={{ opacity: 0, y: 60 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 50 }}
                     transition={{ duration: 1.3 }}
                     className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             >
@@ -48,7 +48,7 @@ export default function Projetos () {
                     stack="Full Stack"
                     titulo="Atletica-Shop"
                     descricao="Sistema Full Stack desenvolvido para centralizar a venda de produtos e otimizar o gerenciamento de pedidos da Atlética Arthur Chiodi (A.A.A.A.C.H)."
-                    tecnologias={[ "TypeScript", "Next.js", "React.js", "Tailwind CSS", "Mercado Pago", "Supabase" ]}
+                    tecnologias={[ "TypeScript", "Next.js", "React.js", "Tailwind CSS", "Mercado Pago SDK", "Supabase" ]}
                     github="https://github.com/BrennoGaspar/Atletica-Shop"
                     deploy="https://atletica-shop.vercel.app/"
                     imagePath={atleticashop}
@@ -76,8 +76,8 @@ export default function Projetos () {
             </motion.div>
 
             <motion.div
-                    initial={{ opacity: 0, y: 90 }}
-                    whileInView={{ opacity: 1, y: 30 }}
+                    initial={{ opacity: 0, y: 130 }}
+                    whileInView={{ opacity: 1, y: 80 }}
                     transition={{ duration: 1.3 }}
                     className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             >
@@ -112,8 +112,8 @@ export default function Projetos () {
             </motion.div>
 
             <motion.div
-                    initial={{ opacity: 0, y: 120 }}
-                    whileInView={{ opacity: 1, y: 60 }}
+                    initial={{ opacity: 0, y: 160 }}
+                    whileInView={{ opacity: 1, y: 110 }}
                     transition={{ duration: 1.3 }}
                     className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             >

@@ -4,6 +4,7 @@ import logo from "@/assets/logo/Brenno_Gaspar_logo.png"
 import Image from 'next/image'
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function NavBar () {
 
@@ -11,67 +12,103 @@ export default function NavBar () {
 
     return (
         
-       <nav className="bg-background/80 backdrop-blur-md fixed w-full top-0 z-50 border-b border-border">
+       <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/70 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
             
             <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-                <a href="#" className="flex items-center gap-3">
-                    <Image
-                        src={logo}
-                        width={70}
-                        height={70}
-                        alt="Logo Brenno Gaspar"
-                    />
-                    <span className="text-xl font-semibold text-foreground">Brenno Gaspar</span>
+                <a href="#hero" className="group flex items-center gap-3">
+
+                    <div className="relative">
+
+                        {/* Glow */}
+                        <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <Image
+                            src={logo}
+                            width={65}
+                            height={65}
+                            alt="Logo Brenno Gaspar"
+                            className="relative transition-transform duration-500 group-hover:scale-105"
+                        />
+
+                    </div>
+
+                    <div className="flex flex-col">
+
+                        <span className="text-xl font-bold text-foreground tracking-wide">Brenno Gaspar</span>
+                        <span className="text-xs text-muted tracking-[0.25em] uppercase">Full Stack Developer</span>
+
+                    </div>
+
                 </a>
 
                 {/* Desktop */}
-                <ul className="hidden md:flex items-center gap-20 text-l font-medium text-muted">
-                    <li>
-                        <a href="#sobre" className="hover:text-primary transition-colors duration-300">Sobre</a>
-                    </li>
+                <ul className="hidden md:flex items-center gap-3 text-sm font-medium">
 
-                    <li>
-                        <a href="#projetos" className="hover:text-primary transition-colors duration-300">Projetos</a>
-                    </li>
+                    {[
+                        { name: "Sobre", href: "#sobre" },
+                        { name: "Projetos", href: "#projetos" },
+                        { name: "Contato", href: "#contato" }
+                    ].map((item) => (
 
-                    <li>
-                        <a href="#contato" className="hover:text-primary transition-colors duration-300">Contato</a>
-                    </li>
+                        <li key={item.name}>
+
+                            <a href={item.href} className="relative px-5 py-3 rounded-2xl text-[15px] font-medium tracking-wide text-muted hover:text-foreground transition-all duration-300 hover:bg-primary/15">
+                                {item.name}
+                            </a>
+
+                        </li>
+
+                    ))}
+
                 </ul>
 
                 {/* Mobile Button */}
-                <button
-                    className="md:hidden text-foreground"
-                    onClick={() => setMenuOpen(!menuOpen)} // Troca o valor (true -> false || false -> true)
-                >
-                    {menuOpen ? <X size={30} /> : <Menu size={25} />}
+                <button className="md:hidden relative z-50 text-foreground" onClick={() => setMenuOpen(!menuOpen)}>
+                    {menuOpen ? <X size={30} /> : <Menu size={26} />}
                 </button>
 
             </div>
 
             {/* Mobile Menu */}
-            {menuOpen && (
-                <div className="md:hidden px-6 pb-6">
-                    <ul className="flex flex-col gap-6 text-lg font-medium text-muted">
-                        <li>
-                            <a href="#sobre" className="hover:text-primary transition-colors duration-300">Sobre</a>
-                        </li>
+            <AnimatePresence>
 
-                        <li>
-                            <a href="#formacao" className="hover:text-primary transition-colors duration-300">Formação</a>
-                        </li>
+                {menuOpen && (
 
-                        <li>
-                            <a href="#projetos" className="hover:text-primary transition-colors duration-300">Projetos</a>
-                        </li>
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.25 }}
+                        className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-2xl"
+                    >
 
-                        <li>
-                            <a href="#contato" className="hover:text-primary transition-colors duration-300">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            )}
+                        <ul className="flex flex-col px-6 py-8 gap-4 text-lg font-medium">
+
+                            {[
+                                { name: "Sobre", href: "#sobre" },
+                                { name: "Projetos", href: "#projetos" },
+                                { name: "Contato", href: "#contato" }
+                            ].map((item) => (
+
+                                <li key={item.name}>
+
+                                    <a href={item.href} onClick={() => setMenuOpen(false)} className="flex items-center justify-between rounded-2xl border border-border bg-card/40 px-5 py-4 text-foreground hover:border-primary hover:bg-primary/5 transition-all duration-300">
+                                        {item.name}
+                                        <span className="text-primary">→</span>
+                                    </a>
+
+                                </li>
+
+                            ))}
+
+                        </ul>
+
+                    </motion.div>
+
+                )}
+
+            </AnimatePresence>
 
         </nav>
 

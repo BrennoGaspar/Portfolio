@@ -2,6 +2,7 @@
 
 import NavBar from "@/components/navbar";
 import About from "@/sections/about";
+import Contato from "@/sections/contact";
 import Hero from "@/sections/hero";
 import Projetos from "@/sections/projects";
 
@@ -14,6 +15,7 @@ export default function Home () {
       <Hero/>
       <About/>
       <Projetos/>
+      <Contato/>
     </div>
 
   )
