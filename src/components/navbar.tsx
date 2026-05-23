@@ -10,13 +10,55 @@ export default function NavBar () {
 
     const [menuOpen, setMenuOpen] = useState(false)
 
+    const handleScroll = (id: string) => {
+
+        const section = document.getElementById(id)
+        if( !section ) return
+
+        const targetPosition = section.getBoundingClientRect().top + window.scrollY
+        const startPosition = window.scrollY
+        const distance = targetPosition - startPosition
+        const duration = 1200
+
+        let start: number | null = null
+
+        function animation(currentTime: number) {
+
+            if (start === null) start = currentTime
+
+            const timeElapsed = currentTime - start
+            const progress = Math.min(timeElapsed / duration, 1)
+            // Conta gerada com auxílio de IA
+            const easeInOut = progress < 0.5 ? 
+                2 * progress * progress :
+                1 - Math.pow(-2 * progress + 2, 2) / 2
+
+            window.scrollTo( 0, startPosition + distance * easeInOut )
+
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation)
+            }
+
+        }
+
+        requestAnimationFrame(animation)
+        setMenuOpen(false)
+
+    }
+
+    const header = [
+                        { name: "Sobre", href: "sobre" },
+                        { name: "Projetos", href: "projetos" },
+                        { name: "Contato", href: "contato" }
+                    ]
+
     return (
         
        <nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/70 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
             
             <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-                <a href="#hero" className="group flex items-center gap-3">
+                <button onClick={() => handleScroll("hero")} className="group flex items-center gap-3">
 
                     <div className="relative">
 
@@ -40,22 +82,18 @@ export default function NavBar () {
 
                     </div>
 
-                </a>
+                </button>
 
                 {/* Desktop */}
                 <ul className="hidden md:flex items-center gap-3 text-sm font-medium">
 
-                    {[
-                        { name: "Sobre", href: "#sobre" },
-                        { name: "Projetos", href: "#projetos" },
-                        { name: "Contato", href: "#contato" }
-                    ].map((item) => (
+                    {header.map((item) => (
 
                         <li key={item.name}>
 
-                            <a href={item.href} className="relative px-5 py-3 rounded-2xl text-[15px] font-medium tracking-wide text-muted hover:text-foreground transition-all duration-300 hover:bg-primary/15">
+                            <button onClick={() => handleScroll(item.href)} className="relative px-5 py-3 rounded-2xl text-[15px] font-medium tracking-wide text-muted hover:text-foreground transition-all duration-300 hover:bg-primary/15">
                                 {item.name}
-                            </a>
+                            </button>
 
                         </li>
 
@@ -85,18 +123,14 @@ export default function NavBar () {
 
                         <ul className="flex flex-col px-6 py-8 gap-4 text-lg font-medium">
 
-                            {[
-                                { name: "Sobre", href: "#sobre" },
-                                { name: "Projetos", href: "#projetos" },
-                                { name: "Contato", href: "#contato" }
-                            ].map((item) => (
+                            {header.map((item) => (
 
                                 <li key={item.name}>
 
-                                    <a href={item.href} onClick={() => setMenuOpen(false)} className="flex items-center justify-between rounded-2xl border border-border bg-card/40 px-5 py-4 text-foreground hover:border-primary hover:bg-primary/5 transition-all duration-300">
+                                    <button onClick={() => handleScroll(item.href)} className="flex w-full items-center justify-between rounded-2xl border border-border bg-card/40 px-5 py-4 text-foreground hover:border-primary hover:bg-primary/5 transition-all duration-300">
                                         {item.name}
                                         <span className="text-primary">→</span>
-                                    </a>
+                                    </button>
 
                                 </li>
 
