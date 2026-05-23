@@ -43,13 +43,8 @@ export default function Projeto({stack, titulo, descricao, tecnologias, github, 
 
                     <div className="space-y-4">
 
-                        <h1 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                            {titulo}
-                        </h1>
-
-                        <p className="text-muted leading-relaxed text-lg">
-                            {descricao}
-                        </p>
+                        <h1 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">{titulo}</h1>
+                        <p className="text-muted leading-relaxed text-lg">{descricao}</p>
 
                     </div>
 
@@ -72,18 +67,16 @@ export default function Projeto({stack, titulo, descricao, tecnologias, github, 
                     {/* Footer */}
                     <div className="flex items-center justify-between pt-4 border-t border-border">
 
-                        <span className="text-sm text-primary font-medium">
-                            Projeto Acadêmico
-                        </span>
+                        <span className="text-sm text-primary font-medium">Projeto Acadêmico</span>
 
                         <div className="flex items-center gap-6">
 
-                            <a href={github} className="flex items-center gap-2 text-muted hover:text-foreground transition-all duration-300 hover:-translate-y-0.5">
+                            <a href={github} className="flex items-center gap-2 text-muted hover:text-foreground transition-all duration-300 hover:-translate-y-0.5" target="_blank">
                                 GitHub
                             </a>
 
                             {deploy != null ? 
-                                <a href={deploy} className="flex items-center gap-2 text-foreground hover:text-primary transition-all duration-300 group">
+                                <a href={deploy} className="flex items-center gap-2 text-foreground hover:text-primary transition-all duration-300 group" target="_blank">
                                     Deploy
                                     <span className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
                                     ↗

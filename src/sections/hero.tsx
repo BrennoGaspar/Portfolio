@@ -97,9 +97,7 @@ export default function Hero() {
 
                                     <Icon size={20} className="relative z-10 text-primary"/>
 
-                                    <span className="relative z-10">
-                                        {tech.name}
-                                    </span>
+                                    <span className="relative z-10">{tech.name}</span>
 
                                 </motion.div>
 
@@ -120,7 +118,7 @@ export default function Hero() {
                             📄 Currículo
                         </a>
 
-                        <a href="https://br.linkedin.com/in/brennogasparpinto" className="border border-border hover:border-primary px-8 py-4 rounded-2xl font-medium transition-all duration-300">
+                        <a href="https://br.linkedin.com/in/brennogasparpinto" className="border border-border hover:border-primary px-8 py-4 rounded-2xl font-medium transition-all duration-300" target="_blank">
                             LinkedIn ↗
                         </a>
 
