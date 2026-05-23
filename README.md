@@ -55,7 +55,7 @@ O projeto segue uma identidade visual moderna em Dark Mode, utilizando:
 
 ## 🌐 Deploy
 
-🔗 Em breve...
+🔗 [Link para o deploy do site](https://brenno-gaspar.vercel.app/)
 
 ---
 
