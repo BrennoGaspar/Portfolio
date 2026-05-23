@@ -130,7 +130,7 @@ export default function Projetos () {
                 <Projeto
                     stack="Automação"
                     titulo="Monitoramento de Preços"
-                    descricao="Sistema desenvolvido em Python para automação e monitoramento de preços de produtos na Kabum, utilizando coleta automatizada de dados para acompanhar variações de valores em tempo real através do console."
+                    descricao="Sistema desenvolvido em Python para automação e monitoramento de preços de produtos na Kabum, utilizando coleta automatizada de dados para te exibir de forma automática o valores atual do produto, através do console."
                     tecnologias={[ "Python" ]}
                     github="https://github.com/BrennoGaspar/MonitoramentoDePrecos"
                     imagePath={monitoramento}

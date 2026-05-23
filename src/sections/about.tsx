@@ -57,14 +57,14 @@ export default function About () {
                         data="2022 - 2024"
                         tipo="Técnico"
                         instituicao="Colégio ENIAC"
-                        texto="Formação integrada ao Ensino Médio Técnico em Tecnologia da Informação, com foco em lógica, programação e desenvolvimento de sistemas."
+                        texto="Ensino Médio integrado ao Curso Técnico de Tecnologia da Informação, com foco em lógica, programação e desenvolvimento de sistemas."
                     />
               
                     <Card
                         data="2025 - 2028"
                         tipo="Cursando"
                         instituicao="Instituto Federal de São Paulo"
-                        texto="Bacharelado em Ciência da Computação com foco em engenharia de software, algoritmos, arquitetura de sistemas e desenvolvimento Full Stack."
+                        texto="Bacharelado em Ciência da Computação com foco em engenharia de software, algoritmos, arquitetura de sistemas e computadores, desenvolvimento Full Stack e estudos científicos relacionados."
                     />
 
                 </motion.div>
