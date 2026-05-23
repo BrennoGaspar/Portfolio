@@ -20,8 +20,8 @@ export default function Projetos () {
 
                 {/* Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 60 }}
-                    whileInView={{ opacity: 1, y: 10 }}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: -10 }}
                     transition={{ duration: 1.3 }}
                     className="space-y-6 text-center"
                 >
@@ -38,8 +38,8 @@ export default function Projetos () {
                 </motion.div>
 
             <motion.div
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 50 }}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 20 }}
                     transition={{ duration: 1.3 }}
                     className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             >
@@ -76,8 +76,8 @@ export default function Projetos () {
             </motion.div>
 
             <motion.div
-                    initial={{ opacity: 0, y: 130 }}
-                    whileInView={{ opacity: 1, y: 80 }}
+                    initial={{ opacity: 0, y: 60 }}
+                    whileInView={{ opacity: 1, y: 40 }}
                     transition={{ duration: 1.3 }}
                     className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             >
@@ -112,8 +112,8 @@ export default function Projetos () {
             </motion.div>
 
             <motion.div
-                    initial={{ opacity: 0, y: 160 }}
-                    whileInView={{ opacity: 1, y: 110 }}
+                    initial={{ opacity: 0, y: 80 }}
+                    whileInView={{ opacity: 1, y: 60 }}
                     transition={{ duration: 1.3 }}
                     className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             >
