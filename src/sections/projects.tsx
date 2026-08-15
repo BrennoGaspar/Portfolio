@@ -149,8 +149,8 @@ export default function Projetos () {
             </motion.div>
 
             <motion.div
-                    initial={{ opacity: 0, y: 80 }}
-                    whileInView={{ opacity: 1, y: 60 }}
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 80 }}
                     transition={{ duration: 1.3 }}
                     className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
             >
