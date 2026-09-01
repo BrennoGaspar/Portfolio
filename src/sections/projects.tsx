@@ -12,6 +12,7 @@ import oceanguardians from "@/assets/images/projects/oceanguardians.png"
 import monitoramento from "@/assets/images/projects/monitoramento.png"
 import biblioteca from "@/assets/images/projects/biblioteca.png"
 import meupaint from "@/assets/images/projects/meupaint.png"
+import simuladoresordenacao from "@/assets/images/projects/simuladoresordenacao.png"
 
 export default function Projetos () {
 
@@ -162,6 +163,15 @@ export default function Projetos () {
                     tecnologias={[ "Java", "Swing" ]}
                     github="https://github.com/BrennoGaspar/Meu-Paint"
                     imagePath={meupaint}
+                />
+
+                <Projeto
+                    stack="JAVA + JSGE"
+                    titulo="Simuladores Ordenação"
+                    descricao="Simulador gráfico interativo em Java dos algoritmos de ordenação mais famosos da computação, utilizando a engine JSGE."
+                    tecnologias={[ "Java", "Swing", "JSGE" ]}
+                    github="https://github.com/BrennoGaspar/SimuladoresOrdenacao"
+                    imagePath={simuladoresordenacao}
                 />
                 
             </motion.div>
