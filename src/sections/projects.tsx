@@ -13,6 +13,7 @@ import monitoramento from "@/assets/images/projects/monitoramento.png"
 import biblioteca from "@/assets/images/projects/biblioteca.png"
 import meupaint from "@/assets/images/projects/meupaint.png"
 import simuladoresordenacao from "@/assets/images/projects/simuladoresordenacao.png"
+import horadoorush from "@/assets/images/projects/horadoorush.png"
 
 export default function Projetos () {
 
@@ -172,6 +173,15 @@ export default function Projetos () {
                     tecnologias={[ "Java", "Swing", "JSGE" ]}
                     github="https://github.com/BrennoGaspar/SimuladoresOrdenacao"
                     imagePath={simuladoresordenacao}
+                />
+
+                <Projeto
+                    stack="JAVA + JSGE"
+                    titulo="Hora do Rush"
+                    descricao="Jogo simulador de compras em um supermercado, desenvolvido em Java com a engine JSGE."
+                    tecnologias={[ "Java", "2D Game", "JSGE" ]}
+                    github="https://github.com/BrennoGaspar/HoraDoRush"
+                    imagePath={horadoorush}
                 />
                 
             </motion.div>
