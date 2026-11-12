@@ -186,6 +186,24 @@ export default function Projetos () {
                 
             </motion.div>
 
+            <motion.div
+                    initial={{ opacity: 0, y: 120 }}
+                    whileInView={{ opacity: 1, y: 100 }}
+                    transition={{ duration: 1.3 }}
+                    className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
+            >
+
+                <Projeto
+                    stack="JAVA"
+                    titulo="Meu Paint"
+                    descricao="Projeto de uma GUI (Graphical User Interface) utilizando o Java Swing para reproduzir o aplicativo Paint."
+                    tecnologias={[ "Java", "Swing" ]}
+                    github="https://github.com/BrennoGaspar/Meu-Paint"
+                    imagePath={meupaint}
+                />
+                
+            </motion.div>
+
         </section>
 
     )
