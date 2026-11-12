@@ -14,31 +14,32 @@ import biblioteca from "@/assets/images/projects/biblioteca.png"
 import meupaint from "@/assets/images/projects/meupaint.png"
 import simuladoresordenacao from "@/assets/images/projects/simuladoresordenacao.png"
 import horadoorush from "@/assets/images/projects/horadoorush.png"
+import simuladorarvores from "@/assets/images/projects/simuladorarvores.png"
 
 export default function Projetos () {
 
     return (
 
-        <section id="projetos" className="relative min-h-screen overflow-hidden px-6 pt-32 md:pt-24 pb-20">
+        <section id="projetos" className="relative min-h-screen overflow-hidden px-6 pt-32 md:pt-24 pb-25">
 
-                {/* Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: -10 }}
-                    transition={{ duration: 1.3 }}
-                    className="space-y-6 text-center"
-                >
+            {/* Header */}
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: -10 }}
+                transition={{ duration: 1.3 }}
+                className="space-y-6 text-center"
+            >
 
-                    <span className="text-primary font-medium tracking-[0.3em] uppercase text-sm">Portfólio</span>
+                <span className="text-primary font-medium tracking-[0.3em] uppercase text-sm">Portfólio</span>
 
-                    <h1 className="text-5xl md:text-6xl font-bold text-foreground">Projetos em Destaque</h1>
+                <h1 className="text-5xl md:text-6xl font-bold text-foreground">Projetos em Destaque</h1>
 
-                    <p className="max-w-3xl mx-auto text-lg text-muted leading-relaxed">
-                        Os principais projetos que desenvolvi ao longo da minha jornada na tecnologia,
-                        envolvendo aplicações web, mobile, automações, jogos digitais e soluções para problemas reais.
-                    </p>
+                <p className="max-w-3xl mx-auto text-lg text-muted leading-relaxed">
+                    Os principais projetos que desenvolvi ao longo da minha jornada na tecnologia,
+                    envolvendo aplicações web, mobile, automações, jogos digitais e soluções para problemas reais.
+                </p>
 
-                </motion.div>
+            </motion.div>
 
             <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -195,11 +196,11 @@ export default function Projetos () {
 
                 <Projeto
                     stack="JAVA"
-                    titulo="Meu Paint"
-                    descricao="Projeto de uma GUI (Graphical User Interface) utilizando o Java Swing para reproduzir o aplicativo Paint."
-                    tecnologias={[ "Java", "Swing" ]}
-                    github="https://github.com/BrennoGaspar/Meu-Paint"
-                    imagePath={meupaint}
+                    titulo="Simulador Árvores"
+                    descricao="Simulador dos algoritmos mais conhecidos, em Estrutura de Dados, sobre árvore, desenvolvido em Java com a biblioteca JSGE."
+                    tecnologias={[ "Java", "JSGE", "Swing" ]}
+                    github="https://github.com/BrennoGaspar/SimuladorArvores"
+                    imagePath={simuladorarvores}
                 />
                 
             </motion.div>
